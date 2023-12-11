@@ -21,7 +21,7 @@ const getStorageData = function<T> (key:string, value:T):T {
 
 type returnStorageData<T> = [T,Dispatch<SetStateAction<T>>]
 
-const useStorageData = function<T> (key:string, value:any):returnStorageData<T> {
+const useStorageData = function<T> (key:string, value:T):returnStorageData<T> {
   const [storageValue, setStorageValue] = useState<T>(getStorageData(key, value));
   //key-потому что он сразу обхватывает первое изменение на key и будет срабатывать сразу же каждый раз когда делаем вызов useStorageData
   //storageValue - потому что снаружи где то если меняем через setStorageValue то измениться и storageValue,
