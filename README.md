@@ -1,1 +1,2 @@
-React, Typescript, scss, localStorage
+React, Typescript, scss, localStorage, React-icons
+
